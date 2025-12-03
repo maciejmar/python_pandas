@@ -1,0 +1,10 @@
+def function_with_many_args(a,b,c=1,*args,**kwargs):
+    d = args[0]
+    firstname=args[0]
+    lastname=args[1]
+    email=kwargs["email"]
+    print(f"@@@  the value of {firstname}.{lastname}.{email} {a*b*c*d}")
+    for key,value in kwargs.items():
+        print(f"{key}={value}")
+    
+function_with_many_args(1,2,3,3,"pan","kleks",email="@gmail",address="Sobiecka 3")
