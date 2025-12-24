@@ -1,0 +1,26 @@
+from transformers import T5ForConditionalGeneration, T5Tokenizer
+
+# Ładujemy model i tokenizer
+model_name = "t5-small"
+model = T5ForConditionalGeneration.from_pretrained(model_name)
+tokenizer = T5Tokenizer.from_pretrained(model_name)
+
+# Funkcja do generowania newslettera na podstawie tekstu
+def generate_newsletter(text):
+    input_text = f"generate a newsletter based on this: {text}"
+    input_ids = tokenizer.encode(input_text, return_tensors="pt", max_length=512, truncation=True)
+    
+    outputs = model.generate(input_ids, max_length=200, num_beams=4, early_stopping=True)
+    
+    newsletter_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return newsletter_text
+
+# Przykładowy input tekst
+input_text = """
+Our company just launched a new product line of eco-friendly water bottles. These bottles are made from 100% recycled materials and are designed to be both stylish and sustainable. We believe this new line will help our customers reduce plastic waste while staying hydrated in style.
+"""
+
+# Generujemy newsletter na podstawie inputu
+newsletter = generate_newsletter(input_text)
+print("Generated Newsletter:")
+print(newsletter)
