@@ -21,13 +21,16 @@ class Dog(Animalic):
     def __str__(self):
         return  f"dog's {self.name} and it sound is: \n {self.sound()}"
 class Cat(Animalic):
-    def __init__(self, name:str, streichelbar:bool)->None:
+    def __init__(self, name:str, streichelbar:bool=True)->None:
         super().__init__(name)
+        self.streichelbar = streichelbar
     def sound(self):
-        return f"miau"
-    def _str__(self):
-        return "self.name cat sounds like {self.sound()} and likes to stroke:{self.streicheln}"
+        return f"miau..."
+    def __str__(self):
+        return f"{self.name} cat sounds like {self.sound()} and likes to stroke:{self.streichelbar}"
 dog_1 = Dog("border",10)
-cat_1 = Cat("nightwalk, 4")
+cat_1 = Cat("nightwalk", False)
+cat_2 = Cat("bubek", True)
 print(dog_1)
 print(cat_1)
+print(cat_2)
