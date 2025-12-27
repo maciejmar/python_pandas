@@ -30,9 +30,19 @@ class Cat(Zwierze):
         return f"the cat {self.name} size of {self.size} and knows tricks {self.trick}"
     
 def makeZwierze(data_flush:dict)->Zwierze:
-    return 
-        
+    typ = data_flush["type"]
+    if typ == "dog":
+        return Pies(data_flush["name"], data_flush["size"],data_flush["serving"])
+    if typ == "cat":
+        return Cat(data_flush["name"],data_flush["size",data_flush["trick"]])
+items = [
+    {"type": "dog", "name": "Burek", "size": 18, "serving": "aport"},
+    {"type": "cat", "name": "Nightwalk", "size": 4.0, "trick":"likes_petting"},
+]
+flockofanimals = [makeZwierze(x) for x in items]
 pies_1 = Pies("burek",18,"aport")
 kot_1 = Cat("mruczek",10,"ble")
 print(pies_1)
 print(kot_1)
+for x in flockofanimals:
+  print(x)
