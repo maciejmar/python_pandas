@@ -34,7 +34,7 @@ def makeZwierze(data_flush:dict)->Zwierze:
     if typ == "dog":
         return Pies(data_flush["name"], data_flush["size"],data_flush["serving"])
     if typ == "cat":
-        return Cat(data_flush["name"],data_flush["size",data_flush["trick"]])
+        return Cat(data_flush["name"],data_flush["size"],data_flush["trick"])
 items = [
     {"type": "dog", "name": "Burek", "size": 18, "serving": "aport"},
     {"type": "cat", "name": "Nightwalk", "size": 4.0, "trick":"likes_petting"},
