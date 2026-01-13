@@ -1,1 +1,7 @@
-data,kategoria,kwota,metoda_platnosci,sklep2025-01-02,Jedzenie,45.30,Karta,Biedronka2025-01-03,Transport,6.00,Got—wka,ZTM2025-01-05,Rachunki,230.00,Przelew,Energia2025-01-08,Jedzenie,32.50,Karta,Lidl2025-01-10,Rozrywka,55.00,Karta,Kino2025-01-15,Jedzenie,24.90,Got—wka,ûabka
+data,kategoria,kwota,metoda_platnosci,sklep
+2025-01-02,Jedzenie,45.30,Karta,Biedronka
+2025-01-03,Transport,6.00,Gotï¿½wka,ZTM
+2025-01-05,Rachunki,230.00,Przelew,Energia
+2025-01-08,Jedzenie,32.50,Karta,Lidl
+2025-01-10,Rozrywka,55.00,Karta,Kino
+2025-01-15,Jedzenie,24.90,Gotï¿½wka,ï¿½abka

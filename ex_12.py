@@ -36,7 +36,7 @@ def makeZwierze(data_flush:dict)->Zwierze:
     if typ == "cat":
         return Cat(data_flush["name"],data_flush["size"],data_flush["trick"])
 items = [
-    {"type": "dog", "name": "Burek", "size": 18, "serving": "aport"},
+    {"type": "dog", "name": "Burek", "size": 8.6, "serving": "aport"},
     {"type": "cat", "name": "Nightwalk", "size": 4.0, "trick":"likes_petting"},
 ]
 flockofanimals = [makeZwierze(x) for x in items]
